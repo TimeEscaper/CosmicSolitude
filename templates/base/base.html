@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/common.css">
+    <title>{{ page_title }}</title>
+    <script type="text/javascript" src="http://vk.com/js/api/share.js?93" charset="windows-1251"></script>
+    <script type="text/javascript" src="//vk.com/js/api/openapi.js?125"></script>
+    <script type="text/javascript">VK.init({apiId: API_ID, onlyWidgets: true});
+</script>
+</head>
+
+</body>
+    <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+
+    <!-- Header-Logo start -->
+    <div class="header-logo">
+        <div id="site-title"><h1><i><a href="#">In&nbsp;Grace&nbsp;Of&nbsp;Cosmic&nbsp;Solitude...</a></i></h1></div>
+    </div>
+    <!-- Header-Logo end -->
+
+    <!-- Navbar start -->
+    <div class="container-fluid">
+        <nav class="navbar navbar-default">
+        <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                {% if menu_index == '0' %}
+                    <li class="active"><a href="#">Приветствие<span class="sr-only">(current)</span></a></li>
+                {% else %}
+                    <li><a href="#">Приветствие<span class="sr-only">(current)</span></a></li>
+                {% endif %}
+                {% if menu_index == '1' %}
+                    <li class="active"><a href="/">Главная<span class="sr-only">(current)</span></a></li>
+                {% else %}
+                    <li><a href="/">Главная<span class="sr-only">(current)</span></a></li>
+                {% endif %}
+                {% if menu_index == '2' %}
+                    <li class="active"><a href="#">Блог<span class="sr-only">(current)</span></a></li>
+                {% else %}
+                    <li><a href="#">Блог<span class="sr-only">(current)</span></a></li>
+                {% endif %}
+                {% if menu_index == '3' %}
+                    <li class="active"><a href="#">Теги и рубрики<span class="sr-only">(current)</span></a></li>
+                {% else %}
+                    <li><a href="#">Теги и рубрики<span class="sr-only">(current)</span></a></li>
+                {% endif %}
+                {% if menu_index == '4' %}
+                    <li class="active"><a href="#">Гостевая книга<span class="sr-only">(current)</span></a></li>
+                {% else %}
+                    <li><a href="#">Гостевая книга<span class="sr-only">(current)</span></a></li>
+                {% endif %}
+                {% if menu_index == '5' %}
+                    <li class="active"><a href="#">О сайте/Обратная связт<span class="sr-only">(current)</span></a></li>
+                {% else %}
+                    <li><a href="#">О сайте/Обратная связь<span class="sr-only">(current)</span></a></li>
+                {% endif %}
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;TimeEscaper<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="/blog/new/">Новая&nbsp;статья&nbsp;&nbsp;<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a></li>
+                    <li><a href="#">Скрытые&nbsp;статьи&nbsp;&nbsp;<span class="glyphicon glyphicon-lock" aria-hidden="true"></span></a></li>
+                    <li><a href="#">Управление&nbsp;&nbsp;<span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+                    <li><a href="#">Django&nbsp;&nbsp;<span class="glyphicon glyphicon-th-large" aria-hidden="true"></span></a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Выход&nbsp;&nbsp;<span class="glyphicon glyphicon-off" aria-hidden="true"></span></a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
+    </div>
+    <!-- Navbar end -->
+
+    <!-- Content start -->
+    <div class="content">
+    <div class="container">
+        <div class="row">
+            <!-- Left start -->
+            <div class="col-md-9" id="content-left">
+                {% block mainblock %}{% endblock %}
+            </div>
+            <!-- Left end -->
+            <!-- Right start -->
+            <div class="col-md-2 col-md-offset-1 content-right" id="content-right">
+
+            </div>
+            <!-- Right end -->
+
+        </div>
+    </div>
+    </div>
+    <!-- Content end -->
+
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/common.js"></script>
+</body>
+</html>

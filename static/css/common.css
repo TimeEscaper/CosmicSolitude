@@ -1,0 +1,165 @@
+body {
+    background: url("../img/background.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.header-logo{
+    margin: 1%;
+}
+
+#site-title{
+    color: #e4e4e4;
+    font-family: 'Inconsolata', sans-serif;
+}
+
+    #site-title a{
+        text-decoration: none;
+        color: #e4e4e4;
+    }
+
+#site-quote{
+
+}
+
+
+/* Modified Bootstrap navbar from http://work.smarchal.com/twbscolor/ */
+.navbar-default {
+  background-color: #434940;
+  border-color: #4f5c5c;
+}
+.navbar-default .navbar-brand {
+  color: #ecf0f1;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #2da8d4;
+}
+.navbar-default .navbar-text {
+  color: #ecf0f1;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #ecf0f1;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #2da8d4;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu {
+  background-color: #434940;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a {
+  color: #ecf0f1;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:hover,
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:focus {
+  color: #2da8d4;
+  background-color: #4f5c5c;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > .divider {
+  background-color: #4f5c5c;
+}
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+  color: #2da8d4;
+  background-color: #4f5c5c;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #2da8d4;
+  background-color: #4f5c5c;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: #2da8d4;
+  background-color: #4f5c5c;
+}
+.navbar-default .navbar-toggle {
+  border-color: #4f5c5c;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #4f5c5c;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #ecf0f1;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #ecf0f1;
+}
+.navbar-default .navbar-link {
+  color: #ecf0f1;
+}
+.navbar-default .navbar-link:hover {
+  color: #2da8d4;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #ecf0f1;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #2da8d4;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #2da8d4;
+    background-color: #4f5c5c;
+  }
+}
+
+.content{
+    color: white;
+    margin-bottom: 5%;
+}
+
+    .content #content-left{
+        padding: 2%;
+        border-radius: 20px;
+        background: #151717;
+        opacity: 0.7;
+    }
+
+    .content #content-right{
+        background: blue;
+    }
+
+.article-preview{
+    margin-bottom: 7%;
+}
+
+    .article-preview-header{
+        border-bottom: 3px white Solid;
+        padding-bottom: 1%;
+    }
+
+    .article-preview-body{
+        margin-top: 1%;
+        color: white;
+        font-family: Verdana;
+        font-size: medium;
+    }
+
+    .article-header{
+        border-bottom: 3px white Solid;
+        padding-bottom: 1%;
+    }
+
+        .article-header .article-tag{
+            text-decoration: none;
+        }
+
+    .article-body{
+        margin-top: 2%;
+        color: white;
+        font-family: Verdana;
+        font-size: medium;
+    }
