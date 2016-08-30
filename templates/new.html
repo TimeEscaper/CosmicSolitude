@@ -2,32 +2,39 @@
 {% block mainblock %}
 <div class="article-edit">
     <h2>Новая&nbsp;статья</h2>
-    <form>
+    {% if error_code != '0' %}
+    <div class="alert alert-danger">{{ error_text }}</div>
+    {% endif %}
+    <form method="POST" action="/blog/new/">
         <div class="form-group">
             <label for="InputTitle">Заголовок:</label>
-            <input type="text" name="title" class="form-control" id="InputTitle" placeholder="Заголовок" />
+            <input type="text" name="title" class="form-control" id="InputTitle" placeholder="Заголовок" value="{{ input_title }}" />
         </div>
         <div class="form-group">
             <label for="InputSlug">Slug:</label>
-            <input type="text" name="slug" class="form-control" id="InputSlug" placeholder="Slug" />
+            <input type="text" name="slug" class="form-control" id="InputSlug" placeholder="Slug" value="{{ input_slug }}">
         </div>
         <div class="form-group">
             <label for="InputRubric">Рубрика:</label>
-            <select name="rubric" class="form-control" id="InputRubric">
-                <option>Без рубрики</option>
-                <option>Sampe rubric</option>
-                <option>Another sample rubric</option>
+            <select name="rubric" class="form-control" id="InputRubric" value="{{ input_rubric }}">
+            {% for rubric in rubrics %}
+                <option value="{{ rubric.id }}">{{ rubric.name }}</option>
+            {% endfor %}    
             </select>
         </div>
         <div class="checkbox">
             <label>
-                <input type="checkbox" name="is_hidden">
+                <input type="checkbox" name="is_hidden" value="{{ input_is_hidden }}">
                 Скрытая&nbsp;статья
             </label>
         </div>
         <div class="form-group">
+            <label for="InputTags">Теги:</label>
+            <input type="text" name="tags" class="form-control" id="InputTags" placeholder="Теги через запятую" value="{{ input_tags }}"/>
+        </div>
+        <div class="form-group">
             <label for="InputText">Текст статьи:</label>
-            <textarea class="form-control" id="InputText" name="text" placeholder="Текст" rows="5"></textarea>
+            <textarea class="form-control" id="InputText" name="text" placeholder="Текст" rows="5">{{ input_text }}</textarea>
         </div>
         <input type="submit" class="btn btn-primary" value="Опубликовать" onclick="#" />
         <button class="btn btn-primary">Сохарнить</button>

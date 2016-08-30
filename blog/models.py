@@ -1,4 +1,3 @@
-
 # _*_ coding: utf-8 _*_
 
 from __future__ import unicode_literals
@@ -18,7 +17,7 @@ class Tag(models.Model):
         return self.name
 
 class Rubric(models.Model):
-    name = models.CharField(max_length = 20, verbose_name = u"Название")
+    name = models.CharField(max_length = 40, verbose_name = u"Название")
 
     class Meta:
         verbose_name = u"Рубрика"
@@ -37,13 +36,13 @@ class Article(models.Model):
     slug = models.CharField(max_length = 255, verbose_name = u"Slug")
     image = models.ImageField(blank = True)
     tags = models.ManyToManyField(Tag, verbose_name = u"Теги")
-    rubrics = models.ForeignKey(Rubric, verbose_name = u"Рубрика")
+    rubric = models.ForeignKey(Rubric, verbose_name = u"Рубрика")
 
     class Meta:
         verbose_name = u"Статья"
         verbose_name_plural = u"Статьи"
 
-class ArticleView:
+class ArticleView(models.Model):
     ip_address = models.GenericIPAddressField(verbose_name = u"IP")
     view_article = models.ForeignKey(Article, verbose_name = u"Статья")
 

@@ -20,6 +20,7 @@ from blog import views as blog_view
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', blog_view.index_display, name = "index_display"),
-    url(r'^blog/sample-article/$', blog_view.article_display, name = "article_display"),
+    url(r'^blog/sample-article/$', blog_view.sample_article_display, name = "sample-article_display"),
     url(r'^blog/new/$', blog_view.new_article_display, name = "new_article_display"),
+    url(r'^blog/article/(?P<slug>[A-Za-z0-9\-]+)/$', blog_view.article_display, name = "article_display"),
 ]
